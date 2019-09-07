@@ -1,0 +1,13 @@
+[Unit]
+Description=watch
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=/nginx-pages/
+ExecStart=/nginx-pages/watch.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
